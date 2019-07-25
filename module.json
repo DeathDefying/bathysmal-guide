@@ -1,0 +1,11 @@
+{
+    "disableAutoUpdate": false,
+    "name": "Bathysmal-rise-guide",
+    "author": "Yang",
+    "description": "BR guide for all bosses",
+    "options": {
+        "niceName": "Bathysmal-Guide"
+    },
+    "servers": ["https://raw.githubusercontent.com/DeathDefying/bathysmal-guide/master/"],
+    "supportUrl": "https://github.com/DeathDefying/bathysmal-guide/issues"
+}
