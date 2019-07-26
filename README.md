@@ -1,1 +1,1 @@
-/8 bs to disabled guide (enabled by default)
+/8 bs to disable guide (enabled by default)

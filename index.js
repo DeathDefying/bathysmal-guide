@@ -13,15 +13,19 @@ const secondBossActions =
 {
     1104: {msg: 'Frontal Spin!'},
     2104: {msg: 'Frontal Spin!'}, 
+    1110: {msg: 'Cyclone! (Slow)'},
+    2110: {msg: 'Cyclone! (Fast)'},
     2102: {msg: 'Back Slip (Fast)'},
     1102: {msg: 'Back Slip (Slow)'},
-    2105: {msg: 'Tail'},
+    2105: {msg: 'Tail'}
 };
 
 const thirdBossActions = 
 {
-    1112: {msg: 'Jump (Slow) - Iframe'},
-    2112: {msg: 'Jump (Fast) - Iframe'},
+    1107: {msg: 'Back Hit! (Slow)'},
+    2107: {msg: 'Back Hit! (Fast)'},
+    1112: {msg: 'Jump (Slow)'},
+    2112: {msg: 'Jump (Fast)'},
     3105: {msg: 'Get in'}, 
     3117: {msg: 'In Out In'},
     3110: {msg: 'Pizza mech'}
@@ -34,12 +38,14 @@ const thirdBoss = 1002;
 module.exports = function BathysmalRiseGuide(mod)
 {
     let hooks = [],
+    inside_dungeon = false;
     enabled = true;
 
     mod.command.add(['br'],(arg) => {
         if(arg && arg.length > 0) arg = arg.toLowerCase();
         enabled = !enabled;
         mod.command.message(`Bathysmal Guide ${enabled ? 'Enabled' : 'Disabled'}`);
+        if(!enabled) unload();
     });
     
         mod.hook('S_LOAD_TOPO',3,(event) => {
