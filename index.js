@@ -38,7 +38,6 @@ const thirdBoss = 1002;
 module.exports = function BathysmalRiseGuide(mod)
 {
     let hooks = [],
-    inside_dungeon = false;
     enabled = true;
 
     mod.command.add(['br'],(arg) => {
