@@ -15,8 +15,8 @@ const secondBossActions =
     2104: {msg: 'Frontal Spin!'}, 
     1110: {msg: 'Cyclone! (Slow)'},
     2110: {msg: 'Cyclone! (Fast)'},
-    2102: {msg: 'Back Slip (Fast)'},
-    1102: {msg: 'Back Slip (Slow)'},
+    2102: {msg: 'Back Flip (Fast)'},
+    1102: {msg: 'Back Flip (Slow)'},
     2105: {msg: 'Tail'}
 };
 
@@ -44,7 +44,7 @@ module.exports = function BathysmalRiseGuide(mod)
         if(arg && arg.length > 0) arg = arg.toLowerCase();
         enabled = !enabled;
         mod.command.message(`Bathysmal Guide ${enabled ? 'Enabled' : 'Disabled'}`);
-        if(!enabled) unload();
+        if(!enabled) unload_guide();
     });
     
         mod.hook('S_LOAD_TOPO',3,(event) => {
