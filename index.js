@@ -63,7 +63,7 @@ module.exports = function BathysmalRiseGuide(mod)
     {
         if(!hooks.length)
         {
-            mod.hook('S_ACTION_STAGE',9,(event) => {
+            hook('S_ACTION_STAGE',9,(event) => {
                 if(!enabled) return;
                 let skill = event.skill.id;
                 switch(event.templateId)
